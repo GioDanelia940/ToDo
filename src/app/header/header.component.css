@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #006a4c;
+}
+.header-panel {
+    display: flex;
+    justify-content: center;
+}
+.navbar-brand {
+  color: rgba(204, 204, 204, 0.87);
+  font-size: 30px;
+  word-spacing: 3px;
+  font-weight: bold;
+}

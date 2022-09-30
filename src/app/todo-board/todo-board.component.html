@@ -1,0 +1,50 @@
+<div
+  class="container d-flex justify-content-between flex-wrap align-items-start"
+  cdkDropListGroup
+>
+  <div
+    class="todo-list"
+    cdkDropList
+    [cdkDropListData]="day.tasks"
+    (cdkDropListDropped)="drop($event)"
+    *ngFor="let day of week.days"
+  >
+    <div class="todo-title">{{ day.name }}</div>
+    <div
+      class="todo-box"
+      *ngFor="let task of day.tasks"
+      [ngStyle]="{ 'background-color': task.color }"
+      cdkDrag
+    >
+      <div [style]="{ width: '40%' }">
+        <input
+          class="time-input"
+          type="number"
+          placeholder="{{ task.time.displayHour() }}"
+          (blur)="task.time.changeHour($event)"
+        />
+        :
+        <input
+          class="time-input"
+          type="number"
+          placeholder="{{ task.time.displayMinute() }}"
+          (blur)="task.time.changeMinute($event)"
+        />
+      </div>
+      <input
+        class="text-input"
+        type="text"
+        placeholder="{{ task.task }}"
+        (blur)="task.addTask($event)"
+      />
+      <button class="color-button" type="button" (click)="task.changeColor()">
+        <i class="fa fa-paint-brush"></i>
+      </button>
+    </div>
+    <div class="todo-box d-flex justify-content-center">
+      <button class="addButton" type="button" (click)="day.addTask()">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+  </div>
+</div>

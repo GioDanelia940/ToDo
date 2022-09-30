@@ -1,0 +1,70 @@
+.todo-box {
+  padding: 20px 10px;
+  border-bottom: solid 1px #333333;
+  color: rgba(204, 204, 204, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: #202225;
+  font-size: 14px;
+}
+
+.todo-list {
+  margin: 15px;
+  width: 20%;
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: rgb(42, 41, 41);
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+.todo-title {
+  padding: 20px 10px;
+  border-bottom: solid 1px #333333;
+  color: rgba(204, 204, 204, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #006a4c;
+  font-size: 20px;
+  font-weight: bold;
+}
+.addButton {
+  margin: 0;
+  background-color: #333333;
+  color: rgba(204, 204, 204, 0.87);
+  font-size: 14px;
+  border: none;
+}
+.time-input {
+  width: 40%;
+  background-color: rgb(32, 34, 37);
+  color: rgba(204, 204, 204, 0.87);
+  border: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.text-input {
+  width: 100%;
+  margin: 0;
+  background-color: rgb(32, 34, 37);
+  color: rgba(204, 204, 204, 0.87);
+  border: none;
+}
+.color-button {
+  margin: 0;
+  background-color: #333333;
+  color: rgba(204, 204, 204, 0.87);
+  border: none;
+  font-size: 15px;
+  margin-left: 2px;
+}
